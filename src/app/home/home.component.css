@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.section1 h4, h1 {
+    font-family: 'Righteous', sans-serif;
+}
+
+.section1 p {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+}
+
+.section1 {
+    width: 100%;
+    padding: 90px 0 50px;
+    background: linear-gradient(100deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6), rgba(0, 0, 0, .1));
+}
+
+.banner-text button {
+    position: relative;
+    padding: 10px 50px;
+    background: rgb(0, 132, 255);
+    border: none;
+    border-radius: 35px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.banner-text button:hover {
+    box-shadow: 0 0 20px rgb(0, 132, 255);
+}
+
+.banner-text button a {
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    color: black;
+}
+
+.slide-right {
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.slide-top {
+    margin-top: 40px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+.profile {
+    width: 200px;
+    height: 200px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.social-media a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(0, 132, 255);
+    border-radius: 50%;
+    font-size: 25px;
+    color: rgb(0, 132, 255);
+    margin: 30px 15px 30px 0;
+    transition: all .5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: rgb(0, 132, 255);
+    color: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 10px rgb(0, 132, 255);
+}
+
+.myimage {
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .myimage {
+        width: 400px;
+        height: 400px;
+    }
+
+    .banner-text button {
+        padding: 8px 30px;
+    }
+    .banner-text bottom a {
+        font-size: 19px !important;
+        font-weight: 500;
+    }
+
+}
+
+
+.col-md {
+    opacity: 0;
+    animation: zoomIn 2s ease forwards;
+    animation-delay: 3s;
+}
+
+.skills {
+    opacity: 0;
+    animation: zoomIn 2s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

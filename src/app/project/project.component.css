@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+.section3 {
+    height: 100vh;
+    padding: 50px 0 80px;
+    background: rgba(0,0 ,0,.9);
+}
+
+.section3 h3 {
+    font-family: 'Lato',sans-serif;
+    font-weight: 600;
+}
+
+.list-group{
+	width: 400px !important;
+    opacity: 0;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.list-group-item{
+	margin-top:10px;
+	border-radius: none; 
+    background: rgb(8,8,97);
+    background: linear-gradient(90deg, rgba(8,8,97,1) 0%, rgba(42,27,60,1) 100%, rgba(0,212,255,1) 100%, rgba(6,78,166,1) 100%);	cursor: pointer;
+    color: #c9e1f5;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.list-group-item:hover{
+	transform: scaleX(1.1);
+}
+
+
+
+.check{
+	opacity: 0;
+	transition: all 0.6s ease-in-out;
+}
+
+.list-group-item:hover .check {
+	opacity: 1;
+
+}
+
+.about span a{
+	font-size: 16px;
+	margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+input[type=checkbox] {
+         position: relative;
+	       cursor: pointer;
+    }
+    input[type=checkbox]:before {
+         content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: 0;
+    border: 1px solid #10a3f9;
+    border-radius: 3px;
+    background-color: white;
+
+}
+    input[type=checkbox]:checked:after {
+         content: "";
+    display: block;
+    width: 7px;
+    height: 12px;
+    border: solid #007bff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+   }
+
+  input[type="checkbox"]:checked + .check { opacity: 1; }
+
+  @media screen and (max-width: 420px) {
+    .list-group {
+        width: 360px !important;
+    }
+  }

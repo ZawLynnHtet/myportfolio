@@ -1,0 +1,45 @@
+.navbar {
+    z-index: 1000;
+}
+
+.active-link {
+    color: green !important;
+    font-weight: bold;
+}
+
+.logo {
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.navbar-nav a {
+    display: inline-block;
+    opacity: 0;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
